@@ -1,6 +1,7 @@
 # Use custom TGW route tables for additional traffic segregation
 resource "aws_ec2_transit_gateway_route_table" "dev" {
   transit_gateway_id = data.terraform_remote_state.vpc_a.outputs.tgw_id
+  
 
   tags = {
     Name = "tgw-rtb-dev"
